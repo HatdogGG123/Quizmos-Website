@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="icon" href="Logo.png">
+    <link rel="stylesheet" href="module.css">
+    <title>Week 2 Module: Javascript Basics</title>
+</head>
+<body>
+    <div class="container">
+        <div class="buttonContainer">
+            <button onclick="goToHome()"> 
+                <img src="back-arrow.png" alt="">
+                <p>Back to Homepage</p>
+            </button>
+            <button onclick="showTOC()">
+                <img src="hamburger.png" alt="">
+                <p>Table of Content</p>
+            </button>
+            <button onclick="showView()">
+                <img src="view.png" alt="">
+                <p>View as</p>
+            </button>
+        </div>
+
+        <div class="tableOfContent" id="tableOfContent">
+            <button class="closeBtn" onclick="hideTOC()">
+                <img src="close.png">
+            </button>
+            <a href="#lesson1">Javascript Comment</a>
+            <a href="#lesson2">Javascript Global Variable</a>
+            <a href="#lesson3">Javascript Data Types</a>
+        </div>
+
+        <div class="view" id="view">
+            <button class="closeBtn" onclick="hideView()">
+                <img src="close.png">
+            </button>
+            <button class="optionBtn">
+                <img src="pdf.png" alt="">
+                <p>PDF File</p>
+            </button>
+            <button class="optionBtn">
+                <img src="ppt.png" alt="">
+                <p>Power Point Presentation</p>
+            </button>
+        </div>
+
+        <div class="mainContent">
+            <div class="mainTitle">Javascript Basics</div>
+
+            <!-- Lesson 1: Javascript Comment -->
+            <div class="lessonTitle" id="lesson1">Lesson 1: Javascript Comment</div>
+            <div class="content">
+                <p>
+                    Here is how you can create comments in Javascript and remember that comments are not shown on the output of the code. 
+                </p>
+                <br>
+
+                <div class="codeBox">
+                    <img src="code2.png" alt="">
+                </div>
+            </div>
+
+            <!-- Lesson 2: Javascript Global Variable -->
+            <div class="lessonTitle" id="lesson2">Lesson 2: Javascript Global Variable</div>
+            <div class="content">
+                <p class="muchBiggerText">
+                    JavaScript global variables can be declared in 4 ways:
+                </p>
+                <br>
+
+                <li>
+                    Automatically
+                    <br><br>
+
+                    <div class="codeBox">
+                        <img src="code3.png" alt="">
+                    </div>
+                    <br>
+                </li>
+                <li>
+                    Using <span style="color: rgb(0, 98, 155);">var</span>
+                    <br><br>
+                    
+                    <div class="codeBox">
+                        <img src="code5.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    Using <span style="color: rgb(0, 98, 155);">let</span>
+                    <br><br>
+
+                    <div class="codeBox">
+                        <img src="code4.png" alt="">
+                    </div>
+                    <br>
+                </li>
+                <li>
+                    Using <span style="color: rgb(0, 98, 155);">const</span>
+                    <br><br>
+
+                    <div class="codeBox">
+                        <img src="code6.png" alt="">
+                    </div>
+                    <br>
+                </li>
+
+                <p class="muchBiggerText">
+                    REMEMBER!
+                </p>
+                <br>
+
+                <li>Always use <b>CONST</b> if the value should not be changed</li>
+                <li>Only use <b>LET</b> if you can't use const</li>
+                <li>Only use <b>VAR</b> if you MUST support old browsers.</li>
+                
+            </div>
+
+            <!-- Lesson 3: Javascript Javascript Data Types -->
+            <div class="lessonTitle" id="lesson3">Lesson 3: Javascript Data Types</div>
+            <div class="content">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eum, voluptatibus quas maiores officia dolore laudantium deleniti sit, a nihil sed! Blanditiis rem officiis ex quisquam aperiam omnis. Rem, enim!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const TOC = document.getElementById('tableOfContent')
+        const viewAs = document.getElementById('view')
+
+        //Function to show Table of Contents
+        function showTOC() {
+            TOC.style.display = "flex"
+            TOC.classList.add('showTocAnimation')
+        }
+
+        //Function to hide Table of Contents
+        function hideTOC() {
+            TOC.classList.remove('showTocAnimation')
+            TOC.style.display = "none"
+        }
+
+        //Function to show view as options
+        function showView() {
+            viewAs.style.display = "flex"
+            viewAs.classList.add('showViewAnimation')
+        }
+
+        //Function to hide view as options
+        function hideView() {
+            viewAs.classList.remove('showViewAnimation')
+            viewAs.style.display = "none"
+        }
+
+        //Function to redirect to homepage
+        function goToHome() {
+            window.location.href = "homepage.html"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Patrick Hand';
+    box-sizing: border-box;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Animation for the whole page */
+@keyframes showBackBtn {
+    from {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100dvh;
+    background-color: #3D5873;
+    display: flex;
+}
+
+/* Design for back button container */
+.container .backBtnContainer {
+    width: fit-content;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    animation: showBackBtn 0.3s ease-in 1;
+}
+
+/* Design for back button */
+.container .backBtnContainer button {
+    padding: 10px;
+    border-radius: 50%;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.container .backBtnContainer button:active {
+    transform: scale(0.95);
+}
+.container .backBtnContainer button img {
+    height: 40px;
+}
+
+/* Design for main content container */
+.container .mainContentContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: showBackBtn 0.3s ease-in 1;
+}
+
+/* Design for notepad (outer/main notepad container) */
+.container .mainContentContainer .notepad {
+    height: 85%;
+    width: 35%;
+    background-color: #8C5D93;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Design for notepad (inner) */
+.container .mainContentContainer .notepad .innerpad {
+    height: 90%;
+    width: 90%;
+    background-color: #FDF6E4;
+    border-radius: 25px;
+}
+
+/* Design for hole container */
+.container .mainContentContainer .notepad .innerpad .holeContainer {
+    width: 100%;
+    height: 10%;
+    border-radius: inherit;
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Design for the 2 holes */
+.container .mainContentContainer .notepad .innerpad .holeContainer .hole {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #393636;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .mainContentContainer .notepad .innerpad .holeContainer .hole::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    width: 30px;
+    height: 120px;
+    background-color: #728198;
+    border-radius: 100px;
+}
+.container .mainContentContainer .notepad .innerpad .holeContainer .hole::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    width: 10px;
+    height: 50px;
+    background-color: #D9D9D9;
+    border-radius: 100px;
+}
+
+/* Design for main content (container for the difficulty choices) */
+.container .mainContentContainer .notepad .innerpad .mainContent {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+}
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+
+/* Animations to show difficulty container (difficulty container / easy mode / normal mode / hard mode) */
+.showDifficultyAnimation {
+    animation: showDiff 0.3s ease-in 1;
+}
+
+@keyframes showDiff {
+    from {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Design for buttons */
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button:active {
+    transform: scale(0.95);
+}
+
+/* Design for "easy" button */
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button:nth-child(1) {
+    background-color: #548B7E;
+}
+
+/* Design for "normal" button */
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button:nth-child(2) {
+    background-color: #C97D5D;
+}
+
+/* Design for "hard" button */
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button:nth-child(3) {
+    background-color: #B97C7C;
+}
+
+/* Design for "how to play" button */
+.container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button:nth-child(4) {
+    background-color: #546c8b;
+}
+
+/* Design for mechanics container */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics {
+    width: 90%;
+    height: fit-content;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Design for the text inside the mechanics container (Title) */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(1) {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+/* Design for the text inside the mechanics container (Instructions) */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(2) {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Design for the text inside the mechanics container (Easy) */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(3) {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Design for the text inside the mechanics container (Normal) */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(4) {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Design for the text inside the mechanics container (Hard) */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(5) {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+/* Animation when showing game mechanics */
+.showMechanicsAnimation {
+    animation: showMech 0.2s ease-in 1;
+}
+
+@keyframes showMech {
+    from {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Design for back to mode button */
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics button {
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    background-color: #3D5873;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+.container .mainContentContainer .notepad .innerpad .mainContent .mechanics button:active {
+    transform: scale(0.95);
+}
+
+/* Design for week choices container */
+.container .mainContentContainer .notepad .innerpad .mainContent .choice {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Design for the buttons 1-7 */
+.container .mainContentContainer .notepad .innerpad .mainContent .choice button {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    font-size: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #548B7E;
+    color: white;
+    cursor: pointer;
+}
+
+/* Design for back button */
+.container .mainContentContainer .notepad .innerpad .mainContent .choice button:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .mainContentContainer .notepad .innerpad .mainContent .choice button:first-child img {
+    height: 50px;
+}
+
+.container .mainContentContainer .notepad .innerpad .mainContent .choice button:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================================================== */
+/* ================== LAPTOP VIEW (1024px) ================== */
+/* ========================================================== */
+
+@media screen and (max-width: 1024px) {
+    /* Design for back button */
+    .container .backBtnContainer button img {
+        height: 30px;
+    }
+
+    /* Design for notepad (outer/main notepad container) */
+    .container .mainContentContainer .notepad {
+        width: 45%;
+    }
+    
+    /* Design for buttons */
+    .container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button {
+        font-size: 35px;
+    }
+
+    /* Design for the buttons 1-7 */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    /* Design for back button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button:first-child img {
+        height: 40px;
+    }
+
+    /* Design for mechanics container */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics {
+        width: 90%;
+        height: fit-content;
+        padding: 15px;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Design for the text inside the mechanics container (Title) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(1) {
+        font-size: 35px;
+    }
+
+    /* Design for the text inside the mechanics container (Instructions) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(2) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Easy) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Normal) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(4) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Hard) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    /* Design for back to mode button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics button {
+        font-size: 20px;
+    }
+}
+
+/* ========================================================== */
+/* =================== TABLET VIEW (768px) ================== */
+/* ========================================================== */
+@media screen and (max-width: 768px) {
+    /* Design for notepad (outer/main notepad container) */
+    .container .mainContentContainer .notepad {
+        width: 55%;
+    }
+    
+    /* Design for buttons */
+    .container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button {
+        font-size: 35px;
+    }
+
+    /* Design for the buttons 1-7 */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button {
+        width: 100px;
+        height: 100px;
+        font-size: 40px;
+    }
+
+    /* Design for back button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button:first-child img {
+        height: 40px;
+    }
+
+    /* Design for mechanics container */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics {
+        width: 90%;
+        height: fit-content;
+        padding: 15px;
+        background-color: white;
+        border: 3px solid black;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* Design for the text inside the mechanics container (Title) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(1) {
+        font-size: 40px;
+    }
+
+    /* Design for the text inside the mechanics container (Instructions) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(2) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Easy) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(3) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Normal) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(4) {
+        font-size: 20px;
+    }
+
+    /* Design for the text inside the mechanics container (Hard) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(5) {
+        font-size: 20px;
+    }
+
+    /* Design for back to mode button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics button {
+        font-size: 25px;
+    }
+}
+
+/* ========================================================== */
+/* =================== MOBILE VIEW (425px) ================== */
+/* ========================================================== */
+@media screen and (max-width: 425px) {
+    /* Design for notepad */
+    .container .mainContentContainer .notepad {
+        height: 75%;
+        width: 85%;
+        border-radius: 30px;
+    }
+    
+    /* Design for notepad (inner) */
+    .container .mainContentContainer .notepad .innerpad {
+        border-radius: 15px;
+    }
+
+    /* Design for the 2 holes */
+    .container .mainContentContainer .notepad .innerpad .holeContainer .hole {
+        width: 45px;
+        height: 45px;
+    }
+    .container .mainContentContainer .notepad .innerpad .holeContainer .hole::before {
+        top: -70px;
+        width: 20px;
+        height: 100px;
+    }
+    .container .mainContentContainer .notepad .innerpad .holeContainer .hole::after {
+        left: 15px;
+        width: 5px;
+        height: 30px;
+    }
+
+    /* Design for buttons */
+    .container .mainContentContainer .notepad .innerpad .mainContent .difficultyContainer button {
+        width: 60%;
+        font-size: 25px;
+    }
+
+    /* Design for the buttons 1-7 */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button {
+        width: 80px;
+        height: 80px;
+        font-size: 35px;
+    }
+
+    /* Design for back button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .choice button:first-child img {
+        height: 35px;
+    }
+        
+    /* Design for the text inside the mechanics container (Title) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(1) {
+        font-size: 30px;
+    }
+
+    /* Design for the text inside the mechanics container (Instructions) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(2) {
+        font-size: 15px;
+    }
+
+    /* Design for the text inside the mechanics container (Easy) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(3) {
+        font-size: 15px;
+    }
+
+    /* Design for the text inside the mechanics container (Normal) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(4) {
+        font-size: 15px;
+    }
+
+    /* Design for the text inside the mechanics container (Hard) */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics p:nth-child(5) {
+        font-size: 15px;
+    }
+
+    /* Design for back to mode button */
+    .container .mainContentContainer .notepad .innerpad .mainContent .mechanics button {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="icon" href="Logo.png">
+    <link rel="stylesheet" href="hangman.css">
+    <title>Hangman Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="backBtnContainer" id="backBtn">
+            <button onclick="goToHome()" >
+                <img src="back-arrow.png" alt="">
+            </button>
+        </div>
+        <div class="mainContentContainer">
+            <div class="notepad" id="notepad">
+                <div class="innerpad">
+                    <div class="holeContainer">
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+                    </div>
+                    <div class="mainContent">
+                        <div class="difficultyContainer" id="difficulty">
+                            <button onclick="showEasyMode()">EASY</button>
+                            <button onclick="showNormalMode()">NORMAL</button>
+                            <button onclick="showHardMode()">HARD</button>
+                            <button onclick="showGameMechanics()">How To Play?</button>
+                        </div>
+                        <div class="mechanics" style="display: none;" id="mechanics">
+                            <p>Game Mechanics</p>
+
+                            <p>To win the game, you must guess all the correct letters; each difficulty has a different number of chances. Select or click the letters you believe to be part of the correct answer. Each incorrect letter reduces your chances. If you have no more chances, you lose the game.</p>
+                            
+                            <p><b>10</b> chances for <span style="color: #548B7E;">easy</span> mode</p>
+                            <p><b>7</b> chances for <span style="color: #C97D5D;">normal</span> mode</p>
+                            <p><b>5</b> chances for <span style="color: #B97C7C;">hard</span> mode</p>
+
+                            <button onclick="hideGameMechanics()">Back to modes</button>
+                        </div>
+
+                        <!-- EASY MODE -->
+                        <div class="choice" id="easyMode" style="display: none;">
+                            <button class="choiceBox" onclick="showDifficultyContainer()">
+                                <img src="back-arrow.png" alt="">
+                            </button>
+                            <a href="easyHangmanOne.html"><button class="choiceBox">1</button></a>
+                            <a href=""><button class="choiceBox">2</button></a>
+                            <a href=""><button class="choiceBox">3</button></a>
+                            <a href=""><button class="choiceBox">4</button></a>
+                            <a href=""><button class="choiceBox">5</button></a>
+                            <a href=""><button class="choiceBox">6</button></a>
+                            <a href=""><button class="choiceBox">7</button></a>
+                        </div>
+
+                        <!-- NORMAL MODE -->
+                        <div class="choice" id="normalMode" style="display: none;">
+                            <button class="choiceBox" onclick="showDifficultyContainer()">
+                                <img src="back-arrow.png" alt="">
+                            </button>
+                            <a href=""><button class="choiceBox">1</button></a>
+                            <a href=""><button class="choiceBox">2</button></a>
+                            <a href=""><button class="choiceBox">3</button></a>
+                            <a href=""><button class="choiceBox">4</button></a>
+                            <a href=""><button class="choiceBox">5</button></a>
+                            <a href=""><button class="choiceBox">6</button></a>
+                            <a href=""><button class="choiceBox">7</button></a>
+                        </div>
+
+                        <!-- HARD MODE -->
+                        <div class="choice" id="hardMode" style="display: none;">
+                            <button class="choiceBox" onclick="showDifficultyContainer()">
+                                <img src="back-arrow.png" alt="">
+                            </button>
+                            <a href=""><button class="choiceBox">1</button></a>
+                            <a href=""><button class="choiceBox">2</button></a>
+                            <a href=""><button class="choiceBox">3</button></a>
+                            <a href=""><button class="choiceBox">4</button></a>
+                            <a href=""><button class="choiceBox">5</button></a>
+                            <a href=""><button class="choiceBox">6</button></a>
+                            <a href=""><button class="choiceBox">7</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //Const variables for difficulties
+        const easyModeContainer = document.getElementById('easyMode')
+        const normalModeContainer = document.getElementById('normalMode')
+        const hardModeContainer = document.getElementById('hardMode')
+
+        //Containers
+        const mechanicsContainer = document.getElementById('mechanics')
+        const difficultyContainer = document.getElementById('difficulty')
+        const backBtnContainer = document.getElementById('backBtn')
+
+        //Function to redirect to homepage
+        function goToHome() {
+            window.location.href = "homepage.html"
+        }
+
+        //Function to show game mechanics
+        function showGameMechanics() {
+            mechanicsContainer.style.display = "block"
+            mechanicsContainer.classList.add('showMechanicsAnimation')
+
+            difficultyContainer.style.display = "none"
+            backBtnContainer.style.display = "none"
+        }
+
+        //Function to hide game mechanics
+        function hideGameMechanics() {
+            mechanicsContainer.style.display = "none"
+            difficultyContainer.style.display = "flex"
+            difficultyContainer.classList.add('showDifficultyAnimation')
+            backBtnContainer.style.display = "block"
+
+        }
+
+        //Function to show easy mode container
+        function showEasyMode() {
+            easyModeContainer.style.display = "grid"
+            easyModeContainer.classList.add('showDifficultyAnimation')
+
+            normalModeContainer.style.display = "none"
+            hardModeContainer.style.display = "none"
+
+            difficultyContainer.style.display = "none"
+            backBtnContainer.style.display = "none"
+
+        }
+
+        //Function to show easy mode container
+        function showNormalMode() {
+            easyModeContainer.style.display = "none"
+            normalModeContainer.style.display = "grid"
+            normalModeContainer.classList.add('showDifficultyAnimation')
+
+            hardModeContainer.style.display = "none"
+
+            difficultyContainer.style.display = "none"
+            backBtnContainer.style.display = "none"
+
+        }
+
+        //Function to show easy mode container
+        function showHardMode() {
+            easyModeContainer.style.display = "none"
+            normalModeContainer.style.display = "none"
+            hardModeContainer.style.display = "grid"
+            hardModeContainer.classList.add('showDifficultyAnimation')
+
+            difficultyContainer.style.display = "none"
+            backBtnContainer.style.display = "none"
+
+        }
+
+        //Function to show difficulty container
+        function showDifficultyContainer() {
+            easyModeContainer.style.display = "none"
+            normalModeContainer.style.display = "none"
+            hardModeContainer.style.display = "none"
+
+            difficultyContainer.style.display = "flex"
+            difficultyContainer.classList.add('showDifficultyAnimation')
+
+            backBtnContainer.style.display = "block"
+
+        }
+
+
+    </script>
+</body>
+</html>

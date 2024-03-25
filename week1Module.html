@@ -41,127 +41,194 @@
             <button class="closeBtn" onclick="hideView()">
                 <img src="close.png">
             </button>
-            <button class="optionBtn">
+            <button class="optionBtn" onclick="showModule()">
                 <img src="pdf.png" alt="">
-                <p>PDF File</p>
+                <p>Module</p>
             </button>
-            <button class="optionBtn">
-                <img src="ppt.png" alt="">
+            <button class="optionBtn" onclick="showPPT()">
+                <img src="projection-screen.png" alt="">
                 <p>Power Point Presentation</p>
             </button>
+            <a href="Web-Development-4th-Quarter.pdf" download style="text-decoration: none;">
+                <button class="optionBtn">
+                    <img src="download.png" alt="">
+                    <p>Download PDF File</p>
+                </button>
+            </a>
+            <a href="WEEK 1 Introduction to Javascript.pptx" download style="text-decoration: none;">
+                <button class="optionBtn">
+                    <img src="download.png" alt="">
+                    <p>Download PPT File</p>
+                </button>
+            </a>
         </div>
 
         <div class="mainContent">
-            <div class="mainTitle">Introduction to Javascript</div>
+            <div class="moduleView" id="moduleView">
+                <div class="mainTitle">Introduction to Javascript</div>
 
-            <!-- Lesson 1: Javascript Intro -->
-            <div class="lessonTitle" id="lesson1">Lesson 1: Javascript Intro</div>
-            <div class="content">
-                <p class="muchBiggerText">
-                    What is JavaScript?
-                </p>
-                <br>
-                <p>
-                    <span class="highlight"><span class="bold">JavaScript (js)</span> is a light-weight object-oriented programming language which is 
-                        used by several websites for scripting the webpages.</span> It is an interpreted, full-fledged 
-                    programming language that enables dynamic interactivity on websites when applied to 
-                    an HTML document. It was introduced in the year 1995 for adding programs to the 
-                    webpages in the Netscape Navigator browser. Since then, it has been adopted by all 
-                    other graphical web browsers. With JavaScript, users can build modern web 
-                    applications to interact directly without reloading the page every time. The traditional 
-                    website uses js to provide several forms of interactivity and simplicity.
-                </p>
-                <br>
-                <p>
-                    Although, JavaScript has no connectivity with Java programming language. The name 
-                    was suggested and provided in the times when Java was gaining popularity in the 
-                    market. In addition to web browsers, databases such as CouchDB and MongoDB uses 
-                    JavaScript as their scripting and query language.
-                </p>
-            </div>
+                <!-- Lesson 1: Javascript Intro -->
+                <div class="lessonTitle" id="lesson1">Lesson 1: Javascript Intro</div>
+                <div class="content">
+                    <p class="muchBiggerText">
+                        What is JavaScript?
+                    </p>
+                    <br>
+                    <p>
+                        <span class="highlight"><span class="bold">JavaScript (js)</span> is a light-weight object-oriented programming language which is 
+                            used by several websites for scripting the webpages.</span> It is an interpreted, full-fledged 
+                        programming language that enables dynamic interactivity on websites when applied to 
+                        an HTML document. It was introduced in the year 1995 for adding programs to the 
+                        webpages in the Netscape Navigator browser. Since then, it has been adopted by all 
+                        other graphical web browsers. With JavaScript, users can build modern web 
+                        applications to interact directly without reloading the page every time. The traditional 
+                        website uses js to provide several forms of interactivity and simplicity.
+                    </p>
+                    <br>
+                    <p>
+                        Although, JavaScript has no connectivity with Java programming language. The name 
+                        was suggested and provided in the times when Java was gaining popularity in the 
+                        market. In addition to web browsers, databases such as CouchDB and MongoDB uses 
+                        JavaScript as their scripting and query language.
+                    </p>
+                </div>
 
-            <!-- Lesson 2: Javascript Features -->
-            <div class="lessonTitle" id="lesson2">Lesson 2: Javascript Features</div>
-            <div class="content">
-                <p>
-                    <p class="muchBiggerText">Javascript also have features and these are:</p>
+                <!-- Lesson 2: Javascript Features -->
+                <div class="lessonTitle" id="lesson2">Lesson 2: Javascript Features</div>
+                <div class="content">
+                    <p>
+                        <p class="muchBiggerText">Javascript also have features and these are:</p>
+                        <br>
+                        <li>
+                            All popular web browsers support JavaScript as they provide built-in execution environments.
+                        </li>
+                        <li>
+                            JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.
+                        </li>
+                        <li>
+                            JavaScript is a weakly typed language, where certain types are implicitly cast(depending on the operation).
+                        </li>
+                        <li>
+                            JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.                        
+                        </li>
+                        <li>
+                            It is a light-weighted and interpreted language.
+                        </li>
+                        <li>
+                            It is a case-sensitive language.
+                        </li>
+                        <li>
+                            JavaScript is supportable in several operating systems including, Windows, macOS, etc.
+                        </li>
+                        <li>
+                            It provides good control to the users over the web browsers.
+                        </li>
+                    </p>
+                </div>
+
+                <!-- Lesson 3: Javascript History -->
+                <div class="lessonTitle" id="lesson3">Lesson 3: Javascript History</div>
+                <div class="content">
+                    <p>
+                        In 1993, Mosaic, the first popular web browser, came into existence. In the year 
+                        1994, Netscape was founded by Marc Andreessen. He realized that the web needed to 
+                        become more dynamic. Thus, a 'glue language' was believed to be provided to HTML to 
+                        make web designing easy for designers and part-time programmers. Consequently, in 
+                        1995, the company recruited Brendan Eich intending to implement and embed Scheme 
+                        programming language to the browser. But, before Brendan could start, the company 
+                        merged with Sun Microsystems for adding Java into its Navigator so that it could 
+                        compete with Microsoft over the web technologies and platforms. Now, two languages 
+                        were there: Java and the scripting language. Further, Netscape decided to give a similar name to the scripting language as Java's. It led to 'Javascript'.
+                    </p>
+                    <br>
+                    <p>
+                        Finally, in May 1995, Marc Andreessen coined the first code of Javascript named 
+                        'Mocha'. Later, the marketing team replaced the name with 'LiveScript'. But, due to 
+                        trademark reasons and certain other reasons, in December 1995, the language was 
+                        finally renamed to 'JavaScript'. From then, JavaScript came into existence.
+                    </p>
+                </div>
+
+                <!-- Lesson 4: Javascript Application -->
+                <div class="lessonTitle" id="lesson4">Lesson 4: Javascript Application</div>
+                <div class="content">
+                    <p class="muchBiggerText">
+                        JavaScript is used to create interactive websites. It is mainly used for:
+                    </p>
                     <br>
                     <li>
-                        All popular web browsers support JavaScript as they provide built-in execution environments.
+                        Client-side validation,
                     </li>
                     <li>
-                        JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.
+                        Dynamic drop-down menus,
                     </li>
                     <li>
-                        JavaScript is a weakly typed language, where certain types are implicitly cast(depending on the operation).
+                        Displaying date and time,
                     </li>
                     <li>
-                        JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.                        
+                        Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),
                     </li>
                     <li>
-                        It is a light-weighted and interpreted language.
+                        Displaying clocks etc.
                     </li>
-                    <li>
-                        It is a case-sensitive language.
-                    </li>
-                    <li>
-                        JavaScript is supportable in several operating systems including, Windows, macOS, etc.
-                    </li>
-                    <li>
-                        It provides good control to the users over the web browsers.
-                    </li>
-                </p>
+                    <br>
+                </div>
             </div>
 
-            <!-- Lesson 3: Javascript History -->
-            <div class="lessonTitle" id="lesson3">Lesson 3: Javascript History</div>
-            <div class="content">
-                <p>
-                    In 1993, Mosaic, the first popular web browser, came into existence. In the year 
-                    1994, Netscape was founded by Marc Andreessen. He realized that the web needed to 
-                    become more dynamic. Thus, a 'glue language' was believed to be provided to HTML to 
-                    make web designing easy for designers and part-time programmers. Consequently, in 
-                    1995, the company recruited Brendan Eich intending to implement and embed Scheme 
-                    programming language to the browser. But, before Brendan could start, the company 
-                    merged with Sun Microsystems for adding Java into its Navigator so that it could 
-                    compete with Microsoft over the web technologies and platforms. Now, two languages 
-                    were there: Java and the scripting language. Further, Netscape decided to give a similar name to the scripting language as Java's. It led to 'Javascript'.
-                </p>
-                <br>
-                <p>
-                    Finally, in May 1995, Marc Andreessen coined the first code of Javascript named 
-                    'Mocha'. Later, the marketing team replaced the name with 'LiveScript'. But, due to 
-                    trademark reasons and certain other reasons, in December 1995, the language was 
-                    finally renamed to 'JavaScript'. From then, JavaScript came into existence.
-                </p>
-            </div>
-
-            <!-- Lesson 4: Javascript Application -->
-            <div class="lessonTitle" id="lesson4">Lesson 4: Javascript Application</div>
-            <div class="content">
-                <p class="muchBiggerText">
-                    JavaScript is used to create interactive websites. It is mainly used for:
-                </p>
-                <br>
-                <li>
-                    Client-side validation,
-                </li>
-                <li>
-                    Dynamic drop-down menus,
-                </li>
-                <li>
-                    Displaying date and time,
-                </li>
-                <li>
-                    Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),
-                </li>
-                <li>
-                    Displaying clocks etc.
-                </li>
-                <br>
-                
-                <div class="codeBox">
-                    <img src="code1.png">
+            <div class="powerPointView" id="powerPointView" style="display: none;">
+                <div class="sidebar">
+                    <div class="slideBox">
+                        <p>1</p>
+                        <img src="week 1 - page 1.png" alt="" id="slide" onclick="sidebarChangeSlide1()">
+                    </div>
+                    <div class="slideBox">
+                        <p>2</p>
+                        <img src="week 1 - page 2.png" alt="" id="slide" onclick="sidebarChangeSlide2()">
+                    </div>
+                    <div class="slideBox">
+                        <p>3</p>
+                        <img src="week 1 - page 3.png" alt="" id="slide" onclick="sidebarChangeSlide3()">
+                    </div>
+                    <div class="slideBox">
+                        <p>4</p>
+                        <img src="week 1 - page 4.png" alt="" id="slide" onclick="sidebarChangeSlide4()">
+                    </div>
+                    <div class="slideBox">
+                        <p>5</p>
+                        <img src="week 1 - page 5.png" alt="" id="slide" onclick="sidebarChangeSlide5()">
+                    </div>
+                    <div class="slideBox">
+                        <p>6</p>
+                        <img src="week 1 - page 6.png" alt="" id="slide" onclick="sidebarChangeSlide6()">
+                    </div>
+                    <div class="slideBox">
+                        <p>7</p>
+                        <img src="week 1 - page 7.png" alt="" id="slide" onclick="sidebarChangeSlide7()">
+                    </div>
+                    <div class="slideBox">
+                        <p>8</p>
+                        <img src="week 1 - page 8.png" alt="" id="slide" onclick="sidebarChangeSlide8()">
+                    </div>
+                    <div class="slideBox">
+                        <p>9</p>
+                        <img src="week 1 - page 9.png" alt="" id="slide" onclick="sidebarChangeSlide9()">
+                    </div>
+                </div>
+                <div class="pptMainContent">
+                    <div class="slideContainer">
+                        <img src="week 1 - page 1.png" id="slideImg">
+                    </div>
+                    <div class="navigation">
+                        <button onclick="prevSlide()">
+                            <img src="left.png" alt="">
+                        </button>
+                        <button>
+                            slide <span id="slideCount">1</span>
+                        </button>
+                        <button onclick="nextSlide()">
+                            <img src="right.png" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,6 +265,119 @@
         //Function to redirect to homepage
         function goToHome() {
             window.location.href = "homepage.html"
+        }
+
+        //Script for changing slides
+        const image = document.getElementById('slideImg')
+        const displaySlideCounter = document.getElementById('slideCount')
+
+        let currentSlide = 1
+
+        function changeSlide() {
+            switch(currentSlide) {
+                case 0:
+                    image.src = "week 1 - page 1.png"
+                    currentSlide = 2
+                break;
+                case 1:
+                    image.src = "week 1 - page 1.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 2:
+                    image.src = "week 1 - page 2.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 3:
+                    image.src = "week 1 - page 3.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 4:
+                    image.src = "week 1 - page 4.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 5:
+                    image.src = "week 1 - page 5.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 6:
+                    image.src = "week 1 - page 6.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 7:
+                    image.src = "week 1 - page 7.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 8:
+                    image.src = "week 1 - page 8.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 9:
+                    image.src = "week 1 - page 9.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                    currentSlide = 0
+                break;
+            }
+        }
+
+        function sidebarChangeSlide1() {
+            currentSlide = 1
+            changeSlide()
+        }
+        function sidebarChangeSlide2() {
+            currentSlide = 2
+            changeSlide()
+        }
+        function sidebarChangeSlide3() {
+            currentSlide = 3
+            changeSlide()
+        }
+        function sidebarChangeSlide4() {
+            currentSlide = 4
+            changeSlide()
+        }
+        function sidebarChangeSlide5() {
+            currentSlide = 5
+            changeSlide()
+        }
+        function sidebarChangeSlide6() {
+            currentSlide = 6
+            changeSlide()
+        }
+        function sidebarChangeSlide7() {
+            currentSlide = 7
+            changeSlide()
+        }
+        function sidebarChangeSlide8() {
+            currentSlide = 8
+            changeSlide()
+        }
+        function sidebarChangeSlide9() {
+            currentSlide = 9
+            changeSlide()
+        }
+
+        function nextSlide() {
+            currentSlide++
+            console.log(currentSlide)
+            changeSlide()
+        }
+        function prevSlide() {
+            currentSlide--
+            console.log(currentSlide)
+            changeSlide()
+        }
+
+        //Script to show or hide ppt view
+        const pptView = document.getElementById('powerPointView')
+        const modulleView = document.getElementById('moduleView')
+        
+        function showPPT() {
+            pptView.style.display = "flex"
+            modulleView.style.display = "none"
+        }
+        function showModule() {
+            pptView.style.display = "none"
+            modulleView.style.display = "block"
         }
     </script>
 </body>

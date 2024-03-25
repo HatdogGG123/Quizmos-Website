@@ -288,26 +288,97 @@ body {
     font-weight: bold;
 }
 
-/* Design for highlight class 
-.container .mainContent .content p .highlight {
-    width: fit-content;
-    background-color: lightgray;
-}
-*/
-
-/* Design for code box */
-.container .mainContent .content .codeBox {
-    height: 10%;
+/* Design for powerpoint view */
+.container .mainContent .powerPointView {
     width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
     display: flex;
 }
-.container .mainContent .content .codeBox img {
+
+/* Design for sidebar */
+.container .mainContent .powerPointView .sidebar {
+    width: 20%;
     height: 100%;
-    width: 100%;
-    border-radius: 5px;
-    border: 3px solid black;
+    padding: 20px;
+    border-right: 2px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+}
+.container .mainContent .powerPointView .sidebar .slideBox {
+    display: flex;
+    gap: 10px;
+}
+.container .mainContent .powerPointView .sidebar .slideBox img {
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    cursor: pointer;
+}
+.container .mainContent .powerPointView .sidebar .slideBox img:hover {
+    transform: scale(1.05);
+    transition-duration: 0.3s;
 }
 
+/* Design for PPT main Content */
+.container .mainContent .powerPointView .pptMainContent {
+    height: 100%;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+}
+.container .mainContent .powerPointView .pptMainContent .slideContainer {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+.container .mainContent .powerPointView .pptMainContent .slideContainer img {
+    height: 500px;
+    box-shadow: 5px 0 30px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Design for PPT navigations */
+.container .mainContent .powerPointView .pptMainContent .navigation {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+.container .mainContent .powerPointView .pptMainContent .navigation button {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.container .mainContent .powerPointView .pptMainContent .navigation button:nth-child(2) {
+    width: 20%;
+}
+.container .mainContent .powerPointView .pptMainContent .navigation button:active {
+    transform: scale(0.98);
+    transition-duration: 0.1s;
+}
+.container .mainContent .powerPointView .pptMainContent .navigation img {
+    height: 30px;
+}
 
 /* Design for much bigger text */
 .container .mainContent .content .muchBiggerText {
@@ -361,6 +432,36 @@ body {
     /* Design for much bigger text */
     .container .mainContent .content .muchBiggerText {
         font-size: 25px;
+    }
+
+    /* Design for powerpoint view */
+    .container .mainContent .powerPointView {
+        flex-direction: column-reverse;
+    }
+    .container .mainContent .powerPointView .sidebar .slideBox img {
+        height: 70px;
+    }
+    .container .mainContent .powerPointView .pptMainContent .slideContainer {
+        height: 85%;
+    }
+    .container .mainContent .powerPointView .pptMainContent .slideContainer img {
+        height: 350px;
+    }
+    .container .mainContent .powerPointView .pptMainContent .navigation {
+        border-bottom: 2px solid black;
+        height: 15%;
+    }
+    .container .mainContent .powerPointView .pptMainContent .navigation button {
+        font-size: 20px;
+        padding: 20px;
+    }
+    .container .mainContent .powerPointView .sidebar {
+        width: 100%;
+        height: 20%;
+        border: none;
+        flex-direction: row;
+        gap: 30px;
+        border-radius: 0 0 10px 10px;
     }
 }
 
@@ -431,5 +532,13 @@ body {
     /* Design for much bigger text */
     .container .mainContent .content .muchBiggerText {
         font-size: 25px;
+    }
+
+    /* Design for PPT view */
+    .container .mainContent .powerPointView .pptMainContent .slideContainer img {
+        height: 150px;
+    }
+    .container .mainContent .powerPointView .pptMainContent .navigation button {
+        font-size: 20px;
     }
 }

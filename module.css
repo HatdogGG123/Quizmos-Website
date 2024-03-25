@@ -536,9 +536,12 @@ body {
 
     /* Design for PPT view */
     .container .mainContent .powerPointView .pptMainContent .slideContainer img {
-        height: 150px;
+        height: 190px;
     }
     .container .mainContent .powerPointView .pptMainContent .navigation button {
-        font-size: 20px;
+        font-size: 15px;
+    }
+    .container .mainContent .powerPointView .sidebar {
+        overflow-y: hidden;
     }
 }

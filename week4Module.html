@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="icon" href="Logo.png">
     <link rel="stylesheet" href="module.css">
-    <title>Week 4 Module: JavaScript Arrays</title>
+    <title>Week 4 Module: Javascript Arrays</title>
 </head>
 <body>
     <div class="container">
@@ -17,73 +17,78 @@
                 <img src="back-arrow.png" alt="">
                 <p>Back to Homepage</p>
             </button>
-            <button onclick="showTOC()">
-                <img src="hamburger.png" alt="">
-                <p>Table of Content</p>
-            </button>
             <button onclick="showView()">
-                <img src="view.png" alt="">
-                <p>View as</p>
+                <img src="document.png" alt="">
+                <p>File links</p>
             </button>
-        </div>
-
-        <div class="tableOfContent" id="tableOfContent">
-            <button class="closeBtn" onclick="hideTOC()">
-                <img src="close.png">
-            </button>
-            <a href="#lesson1">Javascript intro</a>
-            <a href="#lesson2">Javascript features</a>
-            <a href="#lesson3">Javascript history</a>
-            <a href="#lesson4">Javascript application</a>
         </div>
 
         <div class="view" id="view">
             <button class="closeBtn" onclick="hideView()">
                 <img src="close.png">
             </button>
-            <button class="optionBtn">
-                <img src="pdf.png" alt="">
-                <p>PDF File</p>
-            </button>
-            <button class="optionBtn">
-                <img src="ppt.png" alt="">
-                <p>Power Point Presentation</p>
-            </button>
+            <a href="https://cdn.fbsbx.com/v/t59.2708-21/151386082_770819666897575_1901080216390887080_n.pdf/Web-Development-4th-Quarter.pdf?_nc_cat=107&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeGG5YiZfAIyf514VdfzyFKhr7Lo-Siz1Fuvsuj5KLPUW4N-5VxcyynCzh87qTei731RD3iJz98T0epo8TkoNqrc&_nc_ohc=h735pNy9fMkAX8tb8tc&_nc_ht=cdn.fbsbx.com&oh=03_AdQWgD7X4gr9s8c9zA1epqXO4qTBT8zAOikleT3JEeYbQg&oe=6602F5B1&dl=1" style="text-decoration: none;">
+                <button class="optionBtn">
+                    <img src="pdf.png" alt="">
+                    <p>PDF File</p>
+                </button>
+            </a>
+            <a href="https://cdn.fbsbx.com/v/t59.2708-21/434303434_929509722239965_1119270602806051494_n.pptx/WEEK-4-Javascript-Arrays.pptx?_nc_cat=107&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeGfZzUnfYx-p0msv495SYtXlu-HiQhEqbGW74eJCESpsVO3xkdKGU0tVzC5zBbmrJMChvJlQYmKyD57ieuOr9da&_nc_ohc=oFq7yKB0GRwAX_2w1Lv&_nc_ht=cdn.fbsbx.com&oh=03_AdTvK_72AkqRhZ0FIRPVrzB1goJfFHkKqVeK5bw7SolIdw&oe=6602EF8E&dl=1" style="text-decoration: none;">
+                <button class="optionBtn">
+                    <img src="ppt.png" alt="">
+                    <p>PPT File</p>
+                </button>
+            </a>
         </div>
 
         <div class="mainContent">
-            <div class="mainTitle">JavaScript Arrays</div>
-
-            <!-- Lesson 1: Javascript Intro -->
-            <div class="lessonTitle" id="lesson1">Lesson 1: Javascript Intro</div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eum, voluptatibus quas maiores officia dolore laudantium deleniti sit, a nihil sed! Blanditiis rem officiis ex quisquam aperiam omnis. Rem, enim!
-                </p>
-            </div>
-
-            <!-- Lesson 2: Javascript Features -->
-            <div class="lessonTitle" id="lesson2">Lesson 2: Javascript Features</div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eum, voluptatibus quas maiores officia dolore laudantium deleniti sit, a nihil sed! Blanditiis rem officiis ex quisquam aperiam omnis. Rem, enim!
-                </p>
-            </div>
-
-            <!-- Lesson 3: Javascript History -->
-            <div class="lessonTitle" id="lesson3">Lesson 3: Javascript History</div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eum, voluptatibus quas maiores officia dolore laudantium deleniti sit, a nihil sed! Blanditiis rem officiis ex quisquam aperiam omnis. Rem, enim!
-                </p>
-            </div>
-
-            <!-- Lesson 4: Javascript Application -->
-            <div class="lessonTitle" id="lesson4">Lesson 4: Javascript Application</div>
-            <div class="content">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus eum, voluptatibus quas maiores officia dolore laudantium deleniti sit, a nihil sed! Blanditiis rem officiis ex quisquam aperiam omnis. Rem, enim!
-                </p>
+            <div class="powerPointView" id="powerPointView">
+                <div class="sidebar">
+                    <div class="slideBox">
+                        <p>1</p>
+                        <img src="week 4 - page 1.png" alt="" id="slide" onclick="sidebarChangeSlide1()">
+                    </div>
+                    <div class="slideBox">
+                        <p>2</p>
+                        <img src="week 4 - page 2.png" alt="" id="slide" onclick="sidebarChangeSlide2()">
+                    </div>
+                    <div class="slideBox">
+                        <p>3</p>
+                        <img src="week 4 - page 3.png" alt="" id="slide" onclick="sidebarChangeSlide3()">
+                    </div>
+                    <div class="slideBox">
+                        <p>4</p>
+                        <img src="week 4 - page 4.png" alt="" id="slide" onclick="sidebarChangeSlide4()">
+                    </div>
+                    <div class="slideBox">
+                        <p>5</p>
+                        <img src="week 4 - page 5.png" alt="" id="slide" onclick="sidebarChangeSlide5()">
+                    </div>
+                    <div class="slideBox">
+                        <p>6</p>
+                        <img src="week 4 - page 6.png" alt="" id="slide" onclick="sidebarChangeSlide6()">
+                    </div>
+                    <div class="slideBox">
+                        <p>7</p>
+                        <img src="week 4 - page 7.png" alt="" id="slide" onclick="sidebarChangeSlide7()">
+                    </div>
+                </div>
+                <div class="pptMainContent">
+                    <div class="slideContainer">
+                        <img src="week 4 - page 1.png" id="slideImg">
+                    </div>
+                    <div class="navigation">
+                        <button onclick="prevSlide()">
+                            <img src="left.png" alt="">
+                        </button>
+                        <button>
+                            slide <span id="slideCount">1</span>
+                        </button>
+                        <button onclick="nextSlide()">
+                            <img src="right.png" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -119,6 +124,103 @@
         //Function to redirect to homepage
         function goToHome() {
             window.location.href = "homepage.html"
+        }
+
+        //Script for changing slides
+        const image = document.getElementById('slideImg')
+        const displaySlideCounter = document.getElementById('slideCount')
+
+        let currentSlide = 1
+
+        function changeSlide() {
+            switch(currentSlide) {
+                case 0:
+                    image.src = "week 4 - page 1.png"
+                    currentSlide = 2
+                break;
+                case 1:
+                    image.src = "week 4 - page 1.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 2:
+                    image.src = "week 4 - page 2.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 3:
+                    image.src = "week 4 - page 3.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 4:
+                    image.src = "week 4 - page 4.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 5:
+                    image.src = "week 4 - page 5.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 6:
+                    image.src = "week 4 - page 6.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                break;
+                case 7:
+                    image.src = "week 4 - page 7.png"
+                    displaySlideCounter.innerHTML = currentSlide
+                    currentSlide = 0
+                break;
+            }
+        }
+
+        function sidebarChangeSlide1() {
+            currentSlide = 1
+            changeSlide()
+        }
+        function sidebarChangeSlide2() {
+            currentSlide = 2
+            changeSlide()
+        }
+        function sidebarChangeSlide3() {
+            currentSlide = 3
+            changeSlide()
+        }
+        function sidebarChangeSlide4() {
+            currentSlide = 4
+            changeSlide()
+        }
+        function sidebarChangeSlide5() {
+            currentSlide = 5
+            changeSlide()
+        }
+        function sidebarChangeSlide6() {
+            currentSlide = 6
+            changeSlide()
+        }
+        function sidebarChangeSlide7() {
+            currentSlide = 7
+            changeSlide()
+        }
+
+        function nextSlide() {
+            currentSlide++
+            console.log(currentSlide)
+            changeSlide()
+        }
+        function prevSlide() {
+            currentSlide--
+            console.log(currentSlide)
+            changeSlide()
+        }
+
+        //Script to show or hide ppt view
+        const pptView = document.getElementById('powerPointView')
+        const modulleView = document.getElementById('moduleView')
+        
+        function showPPT() {
+            pptView.style.display = "flex"
+            modulleView.style.display = "none"
+        }
+        function showModule() {
+            pptView.style.display = "none"
+            modulleView.style.display = "block"
         }
     </script>
 </body>

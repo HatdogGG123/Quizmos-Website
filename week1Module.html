@@ -17,165 +17,32 @@
                 <img src="back-arrow.png" alt="">
                 <p>Back to Homepage</p>
             </button>
-            <button onclick="showTOC()">
-                <img src="hamburger.png" alt="">
-                <p>Table of Content</p>
-            </button>
             <button onclick="showView()">
-                <img src="view.png" alt="">
-                <p>View as</p>
+                <img src="document.png" alt="">
+                <p>File links</p>
             </button>
-        </div>
-
-        <div class="tableOfContent" id="tableOfContent">
-            <button class="closeBtn" onclick="hideTOC()">
-                <img src="close.png">
-            </button>
-            <a href="#lesson1">Javascript intro</a>
-            <a href="#lesson2">Javascript features</a>
-            <a href="#lesson3">Javascript history</a>
-            <a href="#lesson4">Javascript application</a>
         </div>
 
         <div class="view" id="view">
             <button class="closeBtn" onclick="hideView()">
                 <img src="close.png">
             </button>
-            <button class="optionBtn" onclick="showModule()">
-                <img src="pdf.png" alt="">
-                <p>Module</p>
-            </button>
-            <button class="optionBtn" onclick="showPPT()">
-                <img src="projection-screen.png" alt="">
-                <p>Power Point Presentation</p>
-            </button>
-            <a href="Web-Development-4th-Quarter.pdf" download style="text-decoration: none;">
+            <a href="https://cdn.fbsbx.com/v/t59.2708-21/151386082_770819666897575_1901080216390887080_n.pdf/Web-Development-4th-Quarter.pdf?_nc_cat=107&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeGG5YiZfAIyf514VdfzyFKhr7Lo-Siz1Fuvsuj5KLPUW4N-5VxcyynCzh87qTei731RD3iJz98T0epo8TkoNqrc&_nc_ohc=h735pNy9fMkAX8tb8tc&_nc_ht=cdn.fbsbx.com&oh=03_AdQWgD7X4gr9s8c9zA1epqXO4qTBT8zAOikleT3JEeYbQg&oe=6602F5B1&dl=1" style="text-decoration: none;">
                 <button class="optionBtn">
-                    <img src="download.png" alt="">
-                    <p>Download PDF File</p>
+                    <img src="pdf.png" alt="">
+                    <p>PDF File</p>
                 </button>
             </a>
-            <a href="WEEK 1 Introduction to Javascript.pptx" download style="text-decoration: none;">
+            <a href="https://cdn.fbsbx.com/v/t59.2708-21/434280670_831884545622688_9212167220445459350_n.pptx/WEEK-1-Introduction-to-Javascript.pptx?_nc_cat=104&ccb=1-7&_nc_sid=2b0e22&_nc_eui2=AeEG_3UCXKe158xSg6qVQ_hJb2melNfGlXlvaZ6U18aVeRP-LRxEWsd2Z-IyFSmMZux9y2mltfeaybG5aELuKDu3&_nc_ohc=OFA4au7sS2wAX8xJWNl&_nc_ht=cdn.fbsbx.com&oh=03_AdSWdqJQQa0I9IFAsvI5NX8eTigkp6XymYEsVWFVafjTgg&oe=660318F2&dl=1" style="text-decoration: none;">
                 <button class="optionBtn">
-                    <img src="download.png" alt="">
-                    <p>Download PPT File</p>
+                    <img src="ppt.png" alt="">
+                    <p>PPT File</p>
                 </button>
             </a>
         </div>
 
         <div class="mainContent">
-            <div class="moduleView" id="moduleView">
-                <div class="mainTitle">Introduction to Javascript</div>
-
-                <!-- Lesson 1: Javascript Intro -->
-                <div class="lessonTitle" id="lesson1">Lesson 1: Javascript Intro</div>
-                <div class="content">
-                    <p class="muchBiggerText">
-                        What is JavaScript?
-                    </p>
-                    <br>
-                    <p>
-                        <span class="highlight"><span class="bold">JavaScript (js)</span> is a light-weight object-oriented programming language which is 
-                            used by several websites for scripting the webpages.</span> It is an interpreted, full-fledged 
-                        programming language that enables dynamic interactivity on websites when applied to 
-                        an HTML document. It was introduced in the year 1995 for adding programs to the 
-                        webpages in the Netscape Navigator browser. Since then, it has been adopted by all 
-                        other graphical web browsers. With JavaScript, users can build modern web 
-                        applications to interact directly without reloading the page every time. The traditional 
-                        website uses js to provide several forms of interactivity and simplicity.
-                    </p>
-                    <br>
-                    <p>
-                        Although, JavaScript has no connectivity with Java programming language. The name 
-                        was suggested and provided in the times when Java was gaining popularity in the 
-                        market. In addition to web browsers, databases such as CouchDB and MongoDB uses 
-                        JavaScript as their scripting and query language.
-                    </p>
-                </div>
-
-                <!-- Lesson 2: Javascript Features -->
-                <div class="lessonTitle" id="lesson2">Lesson 2: Javascript Features</div>
-                <div class="content">
-                    <p>
-                        <p class="muchBiggerText">Javascript also have features and these are:</p>
-                        <br>
-                        <li>
-                            All popular web browsers support JavaScript as they provide built-in execution environments.
-                        </li>
-                        <li>
-                            JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.
-                        </li>
-                        <li>
-                            JavaScript is a weakly typed language, where certain types are implicitly cast(depending on the operation).
-                        </li>
-                        <li>
-                            JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.                        
-                        </li>
-                        <li>
-                            It is a light-weighted and interpreted language.
-                        </li>
-                        <li>
-                            It is a case-sensitive language.
-                        </li>
-                        <li>
-                            JavaScript is supportable in several operating systems including, Windows, macOS, etc.
-                        </li>
-                        <li>
-                            It provides good control to the users over the web browsers.
-                        </li>
-                    </p>
-                </div>
-
-                <!-- Lesson 3: Javascript History -->
-                <div class="lessonTitle" id="lesson3">Lesson 3: Javascript History</div>
-                <div class="content">
-                    <p>
-                        In 1993, Mosaic, the first popular web browser, came into existence. In the year 
-                        1994, Netscape was founded by Marc Andreessen. He realized that the web needed to 
-                        become more dynamic. Thus, a 'glue language' was believed to be provided to HTML to 
-                        make web designing easy for designers and part-time programmers. Consequently, in 
-                        1995, the company recruited Brendan Eich intending to implement and embed Scheme 
-                        programming language to the browser. But, before Brendan could start, the company 
-                        merged with Sun Microsystems for adding Java into its Navigator so that it could 
-                        compete with Microsoft over the web technologies and platforms. Now, two languages 
-                        were there: Java and the scripting language. Further, Netscape decided to give a similar name to the scripting language as Java's. It led to 'Javascript'.
-                    </p>
-                    <br>
-                    <p>
-                        Finally, in May 1995, Marc Andreessen coined the first code of Javascript named 
-                        'Mocha'. Later, the marketing team replaced the name with 'LiveScript'. But, due to 
-                        trademark reasons and certain other reasons, in December 1995, the language was 
-                        finally renamed to 'JavaScript'. From then, JavaScript came into existence.
-                    </p>
-                </div>
-
-                <!-- Lesson 4: Javascript Application -->
-                <div class="lessonTitle" id="lesson4">Lesson 4: Javascript Application</div>
-                <div class="content">
-                    <p class="muchBiggerText">
-                        JavaScript is used to create interactive websites. It is mainly used for:
-                    </p>
-                    <br>
-                    <li>
-                        Client-side validation,
-                    </li>
-                    <li>
-                        Dynamic drop-down menus,
-                    </li>
-                    <li>
-                        Displaying date and time,
-                    </li>
-                    <li>
-                        Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),
-                    </li>
-                    <li>
-                        Displaying clocks etc.
-                    </li>
-                    <br>
-                </div>
-            </div>
-
-            <div class="powerPointView" id="powerPointView" style="display: none;">
+            <div class="powerPointView" id="powerPointView">
                 <div class="sidebar">
                     <div class="slideBox">
                         <p>1</p>
